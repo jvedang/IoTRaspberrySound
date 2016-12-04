@@ -18,4 +18,4 @@ WORKDIR /usr/src/app
 
 COPY app/ /usr/src/app
 
-CMD ["python3", "/usr/src/app/test/main.py"]
+CMD ["python3", "/usr/src/app/main.py"]
