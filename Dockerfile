@@ -11,6 +11,7 @@ RUN apt-get -q update \
         	git 
 
 RUN apt-get install python3
+RUN apt-get install python-dev python-rpi.gpio
 
 RUN pip install paho-mqtt		
 
