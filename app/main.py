@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO   #import the GPIO library
 import time               #import the time library
+import random
 
 class Buzzer(object):
  def __init__(self):
@@ -78,6 +79,6 @@ class Buzzer(object):
   GPIO.setup(self.buzzer_pin, GPIO.IN)
 
 if __name__ == "__main__":
-  a = 1
+  a = random.randint(1, 5)
   buzzer = Buzzer()
   buzzer.play(int(a))
