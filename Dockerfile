@@ -20,6 +20,6 @@ RUN pip install paho-mqtt
 WORKDIR /usr/src/app/test
 
 COPY app/ /usr/src/app/test
-RUN source /bin/activate
+RUN . test/bin/activate
 
 CMD ["python3", "/usr/src/app/test/main.py"]
