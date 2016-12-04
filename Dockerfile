@@ -12,14 +12,10 @@ RUN apt-get -q update \
 
 RUN apt-get install python3
 
-RUN pip install --upgrade virtualenv
-RUN virtualenv -p python3 test
-
 RUN pip install paho-mqtt		
 
-WORKDIR /usr/src/app/test
+WORKDIR /usr/src/app
 
-COPY app/ /usr/src/app/test
-RUN . test/bin/activate
+COPY app/ /usr/src/app
 
 CMD ["python3", "/usr/src/app/test/main.py"]
